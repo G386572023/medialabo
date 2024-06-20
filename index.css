@@ -1,3 +1,41 @@
 body{
     background-color: rgb(255, 247, 236);
 }
+
+p.title{
+    margin: 20px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgb(255, 242, 216),
+                 2px 2px 1px rgb(176, 155, 92);
+    font-size: 40px;
+    background: #dfefff;
+    box-shadow:0px 0px 0px 5px #dfefff;
+    border: dashed 2px white;
+    padding: 0.1em 0.5em;
+}
+
+div.zenbu {
+    color: rgb(90, 51, 0);
+}
+
+p.tema{
+    font-size: 25px;
+    font-weight: 900;
+    margin: 25px 0px -16px 0px;
+    padding: 0px 0px 0px 0px;
+
+      
+}
+
+p.kono{
+    margin: 25px 0px -16px 0px;
+}
+
+p.mokuhyou{
+    font-size: 17px;
+    font-weight: 500;
+    margin: 25px 0px -16px 0px;
+}
