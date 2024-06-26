@@ -61,8 +61,9 @@ h2 {
 /*検索結果の枠*/
 h3 {
     position: relative;
+    margin: 0px 0px 0px 0px;
     padding: 0.4em;
-    background: #cad5e5;
+    background: #cbe1f5;
   }
   h3:after {
     position: absolute;
@@ -70,7 +71,7 @@ h3 {
     top: 100%;
     left: 30px;
     border: 10px solid transparent;
-    border-top: 10px solid #cad5e5;
+    border-top: 10px solid #cbe1f5;
     width: 0;
     height: 0;
   }
