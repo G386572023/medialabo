@@ -202,23 +202,17 @@ let data = {
 /////////// 課題3-2 ここからプログラムを書こう
 
 console.log("グルメ情報（検索結果は" + data.results.shop.length + "件）");
-console.log("検索結果1件目");
-console.log(data.results.shop[0].name);
-console.log(data.results.shop[0].access);
-console.log(data.results.shop[0].address);
-console.log(data.results.shop[0].budget.name);
-console.log(data.results.shop[0].catch);
-console.log(data.results.shop[0].genre.name);
-console.log(data.results.shop[0].open);
-console.log(data.results.shop[0].station_name);
-console.log(data.results.shop[0].sub_genre.name);
-console.log("検索結果2件目");
-console.log(data.results.shop[1].name);
-console.log(data.results.shop[1].access);
-console.log(data.results.shop[1].address);
-console.log(data.results.shop[1].budget.name);
-console.log(data.results.shop[1].catch);
-console.log(data.results.shop[1].genre.name);
-console.log(data.results.shop[1].open);
-console.log(data.results.shop[1].station_name);
-console.log(data.results.shop[1].sub_genre.name);
+let a = 0;
+for(let i of data.results.shop){
+a = a + 1;
+console.log("検索結果" + a + "件目");
+console.log(i.name);
+console.log(i.access);
+console.log(i.address);
+console.log(i.budget.name);
+console.log(i.catch);
+console.log(i.genre.name);
+console.log(i.open);
+console.log(i.station_name);
+console.log(i.sub_genre.name);
+}

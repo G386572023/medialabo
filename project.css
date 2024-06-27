@@ -33,53 +33,68 @@
         transparent 105px,  transparent 129px, 
         rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px);
   }
+
+div.zentai {
+    padding: 0 0 0 340px;
+}
   
 
 h2 {
+    color: rgb(50, 50, 50);
+    text-shadow: 0px 2px 2px rgb(161, 161, 161);
     text-align: center;
+    margin: 3px 400px 35px 400px;
     position: relative;
     padding: 0.25em 1em;
-    border-top: solid 2px black;
-    border-bottom: solid 2px black;
+    border-top: solid 1.5px black;
+    border-bottom: solid 1.5px black;
   }
-  h2:before, h1:after {
+  h2:before, h2:after {
     content: '';
     position: absolute;
     top: -7px;
-    width: 2px;
-    height: -webkit-calc(100% + 14px);
+    width: 1.5px;
+    height: -webkit-calc(100% + 40px);
     height: calc(100% + 14px);
     background-color: black;
   }
   h2:before {
-    left: 7px;
+    left: 10px;
   }
   h2:after {
-    right: 7px;
+    right: 10px;
+  }
+
+  h3 {
+    margin: 0 900px 0 0;
+    padding: 0px 0px 0px 0px;
   }
 
 /*検索結果の枠*/
-h3 {
+h3.kekka {
+  text-align: center;
+   padding: 0 0 0 60px;
     position: relative;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 875px 10px -40px;
     padding: 0.4em;
-    background: #cbe1f5;
+    background: #d4e2ef;
   }
-  h3:after {
+  h3.kekka:after {
     position: absolute;
     content: '';
     top: 100%;
-    left: 30px;
+    left: 70px;
     border: 10px solid transparent;
-    border-top: 10px solid #cbe1f5;
+    border-top: 10px solid #d4e2ef;
     width: 0;
     height: 0;
   }
 
 tbody.ichi,tbody.ni {
-    padding: 30px;
-    margin: 50px;
+    padding: 0px 90px 50px 0px;
+    margin: 80px;
     width: 200px;
     height: 150px;
     background: rgb(244, 244, 244);
 }
+
