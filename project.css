@@ -66,8 +66,12 @@ h2 {
   }
 
   h3 {
-    margin: 0 900px 0 0;
-    padding: 0px 0px 0px 0px;
+    position: left;
+    font-weight: lighter;
+  }
+
+  table {
+    padding: 0 0 40px 0;
   }
 
 /*検索結果の枠*/
@@ -98,7 +102,10 @@ tbody.ichi,tbody.ni {
     background: rgb(244, 244, 244);
 }
 
-th.col {
-  
+tr th {
+  padding: 0 10px 0 10px;
+}
+td {
+  padding: 0 10px 0 10px;
 }
 

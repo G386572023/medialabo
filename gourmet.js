@@ -57,7 +57,7 @@ let data = {
         },
         "midnight": "営業していない",
         "mobile_access": "京王八王子駅1分/JR八王子駅北口5分",
-        "name": "バグダッドカフェ Bagdadcafe/モータウン MOTOWN",
+        "name": "Bagdadcafe/モータウン MOTOWN",
         "name_kana": "ばぐだっどかふぇもーたうんはちおうじ",
         "non_smoking": "禁煙席なし",
         "open": "月～日、祝日、祝前日: 17:00～21:00 （料理L.O. 20:00 ドリンクL.O. 20:00）",
@@ -201,7 +201,7 @@ let data = {
 
 /////////// 課題3-2 ここからプログラムを書こう
 
-console.log("グルメ情報（検索結果は" + data.results.shop.length + "件）");
+/*console.log("グルメ情報（検索結果は" + data.results.shop.length + "件）");
 let a = 0;
 for(let i of data.results.shop){
 a = a + 1;
@@ -215,4 +215,119 @@ console.log(i.genre.name);
 console.log(i.open);
 console.log(i.station_name);
 console.log(i.sub_genre.name);
+}*/
+
+let div1 = document.querySelector('div#result');
+
+let zentai = document.createElement('div');
+zentai.classList.add("zentai");
+div1.insertAdjacentElement('beforeend',zentai);
+let h3two = document.createElement('h3');
+h3two.textContent = '(検索結果は' + data.results.shop.length + '件)';
+zentai.insertAdjacentElement('beforeend',h3two);
+let a = 0;
+for(let n of data.results.shop){
+  a = a + 1;
+
+  let h3one = document.createElement('h3');
+  h3one.classList.add("kekka");
+  h3one.textContent = '検索結果' + a + '件目'; 
+  zentai.insertAdjacentElement('beforeend',h3one); 
+
+  let table1 = document.createElement('table');
+  h3one.insertAdjacentElement('afterend',table1); 
+
+  let tbody1 = document.createElement('tbody');
+  tbody1.classList.add('ichi');
+  table1.insertAdjacentElement('beforeend',tbody1);
+
+  let tr1 = document.createElement('tr');
+  tbody1.insertAdjacentElement('beforeend',tr1);
+  let th1 = document.createElement('th');
+  th1.setAttribute('scope','col');
+  th1.textContent = '名前'; 
+  tr1.insertAdjacentElement('beforeend',th1); 
+  let td1 = document.createElement('td');
+  td1.textContent = n.name;
+  tr1.insertAdjacentElement('beforeend',td1);
+
+  let tr2 = document.createElement('tr');
+  tbody1.insertAdjacentElement('beforeend',tr2);
+  let th2 = document.createElement('th');
+  th2.setAttribute('scope','col');
+  th2.textContent = 'アクセス'; 
+  tr2.insertAdjacentElement('beforeend',th2); 
+  let td2 = document.createElement('td');
+  td2.textContent = n.access;
+  tr2.insertAdjacentElement('beforeend',td2);
+
+  let tr3 = document.createElement('tr');
+  tbody1.insertAdjacentElement('beforeend',tr3);
+  let th3 = document.createElement('th');
+  th3.setAttribute('scope','col');
+  th3.textContent = '住所'; 
+  tr3.insertAdjacentElement('beforeend',th3); 
+  let td3 = document.createElement('td');
+  td3.textContent = n.address;
+  tr3.insertAdjacentElement('beforeend',td3);
+
+  let tr4 = document.createElement('tr');
+  tbody1.insertAdjacentElement('beforeend',tr4);
+  let th4 = document.createElement('th');
+  th4.setAttribute('scope','col');
+  th4.textContent = '予算'; 
+  tr4.insertAdjacentElement('beforeend',th4); 
+  let td4 = document.createElement('td');
+  td4.textContent = n.budget.name;
+  tr4.insertAdjacentElement('beforeend',td4);
+
+  let tr5 = document.createElement('tr');
+  tbody1.insertAdjacentElement('beforeend',tr5);
+  let th5 = document.createElement('th');
+  th5.setAttribute('scope','col');
+  th5.textContent = 'キャッチコピー'; 
+  tr5.insertAdjacentElement('beforeend',th5); 
+  let td5 = document.createElement('td');
+  td5.textContent = n.catch;
+  tr5.insertAdjacentElement('beforeend',td5);
+
+  let tr6 = document.createElement('tr');
+  tbody1.insertAdjacentElement('beforeend',tr6);
+  let th6 = document.createElement('th');
+  th6.setAttribute('scope','col');
+  th6.textContent = 'ジャンル'; 
+  tr6.insertAdjacentElement('beforeend',th6); 
+  let td6 = document.createElement('td');
+  td6.textContent = n.genre.name;
+  tr6.insertAdjacentElement('beforeend',td6);
+
+  let tr7 = document.createElement('tr');
+  tbody1.insertAdjacentElement('beforeend',tr7);
+  let th7 = document.createElement('th');
+  th7.setAttribute('scope','col');
+  th7.textContent = '営業時間'; 
+  tr7.insertAdjacentElement('beforeend',th7); 
+  let td7 = document.createElement('td');
+  td7.textContent = n.open;
+  tr7.insertAdjacentElement('beforeend',td7);
+
+  let tr8 = document.createElement('tr');
+  tbody1.insertAdjacentElement('beforeend',tr8);
+  let th8 = document.createElement('th');
+  th8.setAttribute('scope','col');
+  th8.textContent = '最寄駅'; 
+  tr8.insertAdjacentElement('beforeend',th8); 
+  let td8 = document.createElement('td');
+  td8.textContent = n.station_name;
+  tr8.insertAdjacentElement('beforeend',td8);
+
+  let tr9 = document.createElement('tr');
+  tbody1.insertAdjacentElement('beforeend',tr9);
+  let th9 = document.createElement('th');
+  th9.setAttribute('scope','col');
+  th9.textContent = 'サブジャンル'; 
+  tr9.insertAdjacentElement('beforeend',th9); 
+  let td9 = document.createElement('td');
+  td9.textContent = n.sub_genre.name;
+  tr9.insertAdjacentElement('beforeend',td9);
 }
