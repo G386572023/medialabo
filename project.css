@@ -10,7 +10,7 @@ div.haikei {
 
 
 div.zentai {
-    padding: 0 0 0 340px;
+    padding: 0 0 0 100px;
 }
   
 
@@ -28,12 +28,6 @@ h2 {
     background-color: #ffffff;
 }
 
-  h2:before {
-    left: 10px;
-  }
-  h2:after {
-    right: 10px;
-  }
 
   h3 {
     position: left;
@@ -41,7 +35,7 @@ h2 {
   }
 
   table {
-    padding: 0 0 40px 0;
+    padding: 0 0 20px 0;
   }
 
 /*検索結果の枠*/
@@ -50,7 +44,7 @@ h3.kekka {
   text-align: center;
    padding: 0 0 0 60px;
     position: relative;
-    margin: 0px 875px 10px -40px;
+    margin: 0px 1000px 10px -40px;
     padding: 0.4em;
     background: #a37d3c;
   }
@@ -66,7 +60,7 @@ h3.kekka {
   }
 
 tbody.ichi,tbody.ni {
-    padding: 0px 90px 50px 0px;
+    padding: 0px 50px 50px 0px;
     margin: 80px;
     width: 200px;
     height: 150px;

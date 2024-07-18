@@ -1,4 +1,4 @@
-let data = {
+/*let data = {
   "results": {
     "api_version": "1.26",
     "results_available": 52,
@@ -197,10 +197,7 @@ let data = {
       }
     ]
   }
-};
-
-
-print(data)
+};*/
 
 function print(data) {
 
@@ -309,7 +306,7 @@ for(let n of data.results.shop){
   td8.textContent = n.station_name;
   tr8.insertAdjacentElement('beforeend',td8);
 
-  let tr9 = document.createElement('tr');
+  /*let tr9 = document.createElement('tr');
   tbody1.insertAdjacentElement('beforeend',tr9);
   let th9 = document.createElement('th');
   th9.setAttribute('scope','col');
@@ -317,7 +314,7 @@ for(let n of data.results.shop){
   tr9.insertAdjacentElement('beforeend',th9); 
   let td9 = document.createElement('td');
   td9.textContent = n.sub_genre.name;
-  tr9.insertAdjacentElement('beforeend',td9);
+  tr9.insertAdjacentElement('beforeend',td9);*/
 }
 }
 
@@ -332,8 +329,7 @@ function sendRequest() {
     let s = janru.value;
     console.log('ジャンル：' + s);
 
-    let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G002.json'
-    let url4 = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G004.json'
+    let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/' + s + '.json'
 
     // 通信開始
     axios.get(url)
@@ -354,6 +350,7 @@ function showResult(resp) {
 
     // data をコンソールに出力
     console.log(data);
+    print(data);
 
     // data.x を出力
     console.log(data.x);
