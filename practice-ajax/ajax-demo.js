@@ -23,6 +23,9 @@ function showResult(resp) {
 	if (typeof data === 'string') {
 		data = JSON.parse(data);
 	}
+	//
+
+	
 
 	// data をコンソールに出力
 	console.log(data);
