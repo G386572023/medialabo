@@ -1,4 +1,4 @@
-let data = {
+/*let data = {
   "results": {
     "api_version": "1.26",
     "results_available": 52,
@@ -197,30 +197,16 @@ let data = {
       }
     ]
   }
-};
+};*/
 
-print(data);
+let janru = document.querySelector('select[name="janru"]');
+console.log = janru;
 
-function print(data) {}
+print(data)
 
 
-/////////// 課題3-2 ここからプログラムを書こう
+function print(data) {
 
-/*console.log("グルメ情報（検索結果は" + data.results.shop.length + "件）");
-let a = 0;
-for(let i of data.results.shop){
-a = a + 1;
-console.log("検索結果" + a + "件目");
-console.log(i.name);
-console.log(i.access);
-console.log(i.address);
-console.log(i.budget.name);
-console.log(i.catch);
-console.log(i.genre.name);
-console.log(i.open);
-console.log(i.station_name);
-console.log(i.sub_genre.name);
-}*/
 
 let div1 = document.querySelector('div#result');
 
@@ -335,4 +321,49 @@ for(let n of data.results.shop){
   let td9 = document.createElement('td');
   td9.textContent = n.sub_genre.name;
   tr9.insertAdjacentElement('beforeend',td9);
+}
+}
+
+let b = document.querySelector('#sendRequest');
+b.addEventListener('click', sendRequest);
+
+
+// 通信を開始する処理
+function sendRequest() {
+    // URL を設定
+    
+    let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G002.json'
+
+    // 通信開始
+    axios.get(url)
+        .then(showResult)   // 通信成功
+        .catch(showError)   // 通信失敗
+        .then(finish);      // 通信の最後の処理
+}
+
+// 通信が成功した時の処理
+function showResult(resp) {
+    // サーバから送られてきたデータを出力
+    let data = resp.data;
+
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+
+    // data をコンソールに出力
+    console.log(data);
+
+    // data.x を出力
+    console.log(data.x);
+}
+
+// 通信エラーが発生した時の処理
+function showError(err) {
+    console.log(err);
+}
+
+// 通信の最後にいつも実行する処理
+function finish() {
+    console.log('以上');
 }

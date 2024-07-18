@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <title>プロジェクト課題</title>
     <link rel="stylesheet" href="project.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="gourmet.js" defer></script>
+
   </head>
   <body>
     <div class="haikei"></div>
     <label for="janru">ジャンル：</label>
-    <select name="janru" id="janru">
+    <select name="janru" id="janru">z
         <option value="">選択</option>
         <option value="G001">居酒屋</option>
         <option value="G002">ダイニングバー・バル</option>
@@ -23,10 +25,13 @@
         <option value="G010">各国料理</option>
         <option value="G011">カラオケ・パーティ</option>
         <option value="G012">バー・カクテル</option>
-        <option value="G013">イタリアン・フレンチ</option>
-        <option value="G014">中華</option>
+        <option value="G013">ラーメン</option>
+        <option value="G014">カフェ・スイーツ</option>
+        <option value="G015">その他のグルメ</option>
+        <option value="G016">お好み焼き</option>
+        <option value="G017">韓国料理</option>
     </select>
-    <button id="print">検索</button>
+    <button id="sendRequest">検索</button>
     <h2>グルメ情報</h2>
 
     <div id="result"></div>
