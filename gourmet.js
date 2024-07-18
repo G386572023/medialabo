@@ -1,4 +1,4 @@
-/*let data = {
+let data = {
   "results": {
     "api_version": "1.26",
     "results_available": 52,
@@ -197,13 +197,10 @@
       }
     ]
   }
-};*/
+};
 
-let janru = document.querySelector('select[name="janru"]');
-console.log = janru;
 
 print(data)
-
 
 function print(data) {
 
@@ -331,8 +328,12 @@ b.addEventListener('click', sendRequest);
 // 通信を開始する処理
 function sendRequest() {
     // URL を設定
-    
+    let janru = document.querySelector('select[name="janru"]');
+    let s = janru.value;
+    console.log('ジャンル：' + s);
+
     let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G002.json'
+    let url4 = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G004.json'
 
     // 通信開始
     axios.get(url)
