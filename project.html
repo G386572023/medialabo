@@ -7,10 +7,26 @@
     <script src="gourmet.js" defer></script>
   </head>
   <body>
-    <div class="bg_pattern Paper_v2"></div>
-    <form>
-        <input type="text">
-    </form>
+    <div class="haikei"></div>
+    <label for="janru">ジャンル：</label>
+    <select name="janru" id="janru">
+        <option value="">選択</option>
+        <option value="G001">居酒屋</option>
+        <option value="G002">ダイニングバー・バル</option>
+        <option value="G003">創作料理</option>
+        <option value="G003">和食</option>
+        <option value="G004">洋食</option>
+        <option value="G005">イタリアン・フレンチ</option>
+        <option value="G006">中華</option>
+        <option value="G008">焼肉・ホルモン</option>
+        <option value="G009">アジア・エスニック料理</option>
+        <option value="G010">各国料理</option>
+        <option value="G011">カラオケ・パーティ</option>
+        <option value="G012">バー・カクテル</option>
+        <option value="G013">イタリアン・フレンチ</option>
+        <option value="G014">中華</option>
+    </select>
+    <button id="print">検索</button>
     <h2>グルメ情報</h2>
 
     <div id="result"></div>

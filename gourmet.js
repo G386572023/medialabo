@@ -199,6 +199,11 @@ let data = {
   }
 };
 
+print(data);
+
+function print(data) {}
+
+
 /////////// 課題3-2 ここからプログラムを書こう
 
 /*console.log("グルメ情報（検索結果は" + data.results.shop.length + "件）");

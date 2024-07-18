@@ -1,38 +1,13 @@
-.bg_pattern {
+div.haikei {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
+    background-color: #fbfff2;
     z-index: -1;
   }
-  .Paper_v2 {
-    background-image:
-      repeating-linear-gradient(to bottom,
-        transparent 25px,
-        rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
-        transparent 27px,  transparent 51px, 
-        rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
-        transparent 53px,  transparent 77px, 
-        rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
-        transparent 79px,  transparent 103px, 
-        rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
-        transparent 105px,  transparent 129px, 
-        rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px),
-    
-      repeating-linear-gradient(to right,
-        transparent 25px,
-        rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
-        transparent 27px,  transparent 51px, 
-        rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
-        transparent 53px,  transparent 77px, 
-        rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
-        transparent 79px,  transparent 103px, 
-        rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
-        transparent 105px,  transparent 129px, 
-        rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px);
-  }
+
 
 div.zentai {
     padding: 0 0 0 340px;
@@ -41,23 +16,17 @@ div.zentai {
 
 h2 {
     color: rgb(50, 50, 50);
-    text-shadow: 0px 2px 2px rgb(161, 161, 161);
+    text-shadow: 0px 2px 2px rgb(255, 248, 231);
     text-align: center;
     margin: 3px 400px 35px 400px;
     position: relative;
-    padding: 0.25em 1em;
-    border-top: solid 1.5px black;
-    border-bottom: solid 1.5px black;
+    padding: 1em 1em;
   }
-  h2:before, h2:after {
-    content: '';
-    position: absolute;
-    top: -7px;
-    width: 1.5px;
-    height: -webkit-calc(100% + 40px);
-    height: calc(100% + 14px);
-    background-color: black;
-  }
+
+  h2 {
+    border: 2px solid rgb(56, 27, 0);
+}
+
   h2:before {
     left: 10px;
   }
@@ -76,12 +45,13 @@ h2 {
 
 /*検索結果の枠*/
 h3.kekka {
+  color: rgb(255, 255, 255);
   text-align: center;
    padding: 0 0 0 60px;
     position: relative;
     margin: 0px 875px 10px -40px;
     padding: 0.4em;
-    background: #d4e2ef;
+    background: #a37d3c;
   }
   h3.kekka:after {
     position: absolute;
@@ -89,7 +59,7 @@ h3.kekka {
     top: 100%;
     left: 70px;
     border: 10px solid transparent;
-    border-top: 10px solid #d4e2ef;
+    border-top: 10px solid #a37d3c;
     width: 0;
     height: 0;
   }
@@ -99,7 +69,7 @@ tbody.ichi,tbody.ni {
     margin: 80px;
     width: 200px;
     height: 150px;
-    background: rgb(244, 244, 244);
+    background: hsl(57, 100%, 86%);
 }
 
 tr th {
