@@ -55,3 +55,13 @@ p.mokuhyou{
 ol li {
     list-style-type: none;
 }
+
+h2,h3 {
+    margin: 35px 0px -14px 0px;
+}
+
+p.sankou{
+    font-size: 17px;
+    font-weight: 900;
+    margin: 35px 0px -7px 0px;
+}
